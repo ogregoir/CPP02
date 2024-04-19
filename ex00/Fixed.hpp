@@ -5,19 +5,19 @@
 #include <string>
 #include <iostream>
 
-class Canon {
+class Fixed {
 
 private :
 
-int         nbr_fix;
-const int   bits = 8; 
+int                 nbr_fix;
+static const int    bits = 8;
 
 public :
 
-Canon( void );
-Canon::Canon(const Canon&);
-Canon& Canon::operator=(const Canon&);
-~Canon( void );
+Fixed( void );
+Fixed(const Fixed &copy);
+Fixed& operator=(const Fixed &copy);
+~Fixed( void );
 int getRawBits( void ) const;
 void setRawBits( int const raw );
 };
