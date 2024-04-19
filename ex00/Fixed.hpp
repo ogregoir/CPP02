@@ -1,6 +1,7 @@
 #ifndef CANON_H
 #define CANON_H
 
+#pragma once
 #include <string>
 #include <iostream>
 
