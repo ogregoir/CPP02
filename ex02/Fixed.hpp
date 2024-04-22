@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/20 00:01:15 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/04/23 00:54:52 by ogregoir         ###   ########.fr       */
+/*   Created: 2024/04/23 00:54:10 by ogregoir          #+#    #+#             */
+/*   Updated: 2024/04/23 00:56:22 by ogregoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # pragma once
 # include <string>
 # include <iostream>
+
 
 class Fixed {
 

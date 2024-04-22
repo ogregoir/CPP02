@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/19 00:08:51 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/04/22 20:46:40 by ogregoir         ###   ########.fr       */
+/*   Created: 2024/04/23 00:41:07 by ogregoir          #+#    #+#             */
+/*   Updated: 2024/04/23 01:22:03 by ogregoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 Fixed::Fixed( void )
 {
     std::cout << "Default constructor called" << std::endl;
-    this->setRawBits(0);
 }
 
 Fixed::~Fixed( void )
@@ -26,23 +25,42 @@ Fixed::~Fixed( void )
 Fixed::Fixed(const Fixed &copy)
 {
     std::cout << "Copy constructor called" << std::endl;
-    nbr_fix = copy.getRawBits();
+    if (this != &copy) 
+        this->nbr_fix = copy.nbr_fix;
 }
 
-int Fixed::getRawBits( void ) const
+Fixed::Fixed(const int copy)
 {
-   std::cout << "getRawbits member function called" << std::endl;
-   return (this->nbr_fix);
+    std::cout << "Int constructor called" << std::endl;
+    this->nbr_fix = copy << bits;
+}
+
+Fixed::Fixed(const float cop)
+{
+    std::cout << "Float constructor called" << std::endl;
+    this->nbr_fix = static_cast<int>(cop * (1 << bits));
 }
 
 Fixed& Fixed::operator=(const Fixed &copy)
 {
     std::cout << "Copy assignement operator called" << std::endl;
-    this->setRawBits(copy.getRawBits());
+    if (this != &copy) 
+        this->nbr_fix = copy.nbr_fix;
     return(*this);
 }
 
-void Fixed::setRawBits( int const raw )
+float Fixed::toFloat( void ) const
 {
-    this->nbr_fix = raw;
+     return(static_cast<float>(this->nbr_fix) / (1 << bits));
+}
+
+int Fixed::toInt( void ) const
+{
+    return (this->nbr_fix >> bits);
+}
+
+std::ostream& operator <<(std::ostream& os, const Fixed& act) 
+{
+    os << act.toFloat();
+    return (os);
 }
