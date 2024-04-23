@@ -6,7 +6,7 @@
 /*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 00:01:15 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/04/23 00:54:52 by ogregoir         ###   ########.fr       */
+/*   Updated: 2024/04/23 15:20:44 by ogregoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ Fixed(const int copy);
 Fixed(const float cop);
 Fixed(const Fixed &copy);
 Fixed& operator=(const Fixed &copy);
+int getRawBits( void ) const;
+void setRawBits( int const raw );
 float toFloat( void ) const;
 int toInt( void ) const;
 

@@ -6,7 +6,7 @@
 /*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 00:41:07 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/04/23 01:22:03 by ogregoir         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:14:56 by ogregoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 Fixed::Fixed( void )
 {
     std::cout << "Default constructor called" << std::endl;
+    this->setRawBits(0);
 }
 
 Fixed::~Fixed( void )
@@ -25,8 +26,18 @@ Fixed::~Fixed( void )
 Fixed::Fixed(const Fixed &copy)
 {
     std::cout << "Copy constructor called" << std::endl;
-    if (this != &copy) 
-        this->nbr_fix = copy.nbr_fix;
+    nbr_fix = copy.getRawBits();
+}
+
+int Fixed::getRawBits( void ) const
+{
+   std::cout << "getRawbits member function called" << std::endl;
+   return (this->nbr_fix);
+}
+
+void Fixed::setRawBits( int const raw )
+{
+    this->nbr_fix = raw;
 }
 
 Fixed::Fixed(const int copy)
@@ -44,8 +55,7 @@ Fixed::Fixed(const float cop)
 Fixed& Fixed::operator=(const Fixed &copy)
 {
     std::cout << "Copy assignement operator called" << std::endl;
-    if (this != &copy) 
-        this->nbr_fix = copy.nbr_fix;
+    this->setRawBits(copy.getRawBits());
     return(*this);
 }
 

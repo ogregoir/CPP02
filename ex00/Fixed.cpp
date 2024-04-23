@@ -6,7 +6,7 @@
 /*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 00:08:51 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/04/22 20:46:40 by ogregoir         ###   ########.fr       */
+/*   Updated: 2024/04/23 15:18:48 by ogregoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,11 @@ int Fixed::getRawBits( void ) const
    return (this->nbr_fix);
 }
 
+void Fixed::setRawBits( int const raw )
+{
+    this->nbr_fix = raw;
+}
+
 Fixed& Fixed::operator=(const Fixed &copy)
 {
     std::cout << "Copy assignement operator called" << std::endl;
@@ -42,7 +47,3 @@ Fixed& Fixed::operator=(const Fixed &copy)
     return(*this);
 }
 
-void Fixed::setRawBits( int const raw )
-{
-    this->nbr_fix = raw;
-}
