@@ -6,7 +6,7 @@
 /*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 00:54:10 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/04/23 16:14:25 by ogregoir         ###   ########.fr       */
+/*   Updated: 2024/04/24 20:13:32 by ogregoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,29 @@ Fixed(const int copy);
 Fixed(const float cop);
 Fixed(const Fixed &copy);
 Fixed& operator=(const Fixed &copy);
+
+//Comparison operators
+bool operator==(Fixed const& copy);
+bool operator>(Fixed const& copy);
+bool operator<(Fixed const& copy);
+bool operator>=(Fixed const& copy);
+bool operator<=(Fixed const& copy);
+bool operator!=(Fixed const& copy);
+
+//arithmetic operators
+int operator+(Fixed const&copy);
+int operator-(Fixed const&copy);
+int operator/(Fixed const&copy);
+int operator*(Fixed const&copy);
+
+//increment and decrement operators
+int operator++(int n);
+int operator+(int n);
+int operator--(int n);
+int operator-(int n);
+
+
+
 int getRawBits( void ) const;
 void setRawBits( int const raw );
 float toFloat( void ) const;
