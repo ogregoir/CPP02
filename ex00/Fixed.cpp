@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 00:08:51 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/04/19 23:34:29 by ogregoir         ###   ########.fr       */
+/*   Updated: 2024/04/21 17:28:24 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ Fixed::~Fixed( void )
 Fixed::Fixed(const Fixed &copy)
 {
     std::cout << "Copy constructor called" << std::endl;
-    nbr_fix = copy.getRawBits();
+    nbr_fix = copy.getRawBits() << bits;
 }
 
 int Fixed::getRawBits( void ) const
 {
    std::cout << "getRawbits member function called" << std::endl;
-   return (this->nbr_fix);
+   return (this->nbr_fix >> bits);
 }
 
 Fixed& Fixed::operator=(const Fixed &copy)
@@ -44,5 +44,5 @@ Fixed& Fixed::operator=(const Fixed &copy)
 
 void Fixed::setRawBits( int const raw )
 {
-    this->nbr_fix = raw;
+    this->nbr_fix = raw << bits;
 }
