@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 00:54:10 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/04/25 13:55:31 by marvin           ###   ########.fr       */
+/*   Updated: 2024/04/25 20:25:09 by ogregoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # pragma once
 # include <string>
 # include <iostream>
+# include <math.h>
 
 class Fixed {
 
@@ -39,18 +40,18 @@ float toFloat( void ) const;
 
 
 //Comparison operators
-bool operator==(Fixed const& copy);
-bool operator>(Fixed const& copy);
-bool operator<(Fixed const& copy);
-bool operator>=(Fixed const& copy);
-bool operator<=(Fixed const& copy);
-bool operator!=(Fixed const& copy);
+bool operator==(Fixed const& copy) const;
+bool operator>(Fixed const& copy) const;
+bool operator<(Fixed const& copy) const;
+bool operator>=(Fixed const& copy) const;
+bool operator<=(Fixed const& copy) const;
+bool operator!=(Fixed const& copy) const;
 
 //arithmetic operators
-int operator+(Fixed const&copy);
-int operator-(Fixed const&copy);
-int operator/(Fixed const&copy);
-int operator*(Fixed const&copy);
+Fixed operator+(Fixed const&copy) const;
+Fixed operator-(Fixed const&copy) const;
+Fixed operator/(Fixed const&copy) const;
+Fixed operator*(Fixed const&copy) const;
 
 //increment and decrement operators
 Fixed& operator++();
@@ -58,11 +59,11 @@ Fixed operator++(int n);
 Fixed& operator--();
 Fixed operator--(int n);
 
-static Fixed  &min(Fixed &a, Fixed &b);
-static Fixed  &min(const Fixed &a, const Fixed &b);
+static       Fixed &min(Fixed &a, Fixed &b);
+static const Fixed &min(const Fixed &a, const Fixed &b);
 
-static Fixed  &max(Fixed &a, Fixed &b);
-static Fixed  &max(const Fixed &a, const Fixed &b);
+static Fixed       &max(Fixed &a, Fixed &b);
+static const Fixed &max(const Fixed &a, const Fixed &b);
 
 
 };
