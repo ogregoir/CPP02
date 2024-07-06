@@ -3,17 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 00:01:15 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/04/23 15:20:44 by ogregoir         ###   ########.fr       */
+/*   Updated: 2024/07/06 16:46:49 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_H
-# define FIXED_H
-
 # pragma once
+
 # include <string>
 # include <iostream>
 
@@ -40,5 +38,3 @@ int toInt( void ) const;
 };
 
 std::ostream& operator <<(std::ostream& os, const Fixed& act);
-
-#endif

@@ -1,7 +1,17 @@
-#ifndef CANON_H
-#define CANON_H
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/06 16:41:25 by marvin            #+#    #+#             */
+/*   Updated: 2024/07/06 16:45:59 by marvin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #pragma once
+
 #include <string>
 #include <iostream>
 
@@ -21,5 +31,3 @@ Fixed& operator=(const Fixed &copy);
 int getRawBits( void ) const;
 void setRawBits( int const raw );
 };
-
-#endif

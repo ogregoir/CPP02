@@ -3,17 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 00:54:10 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/04/25 20:25:09 by ogregoir         ###   ########.fr       */
+/*   Updated: 2024/07/06 16:48:26 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_H
-# define FIXED_H
-
 # pragma once
+
 # include <string>
 # include <iostream>
 # include <math.h>
@@ -69,5 +67,3 @@ static const Fixed &max(const Fixed &a, const Fixed &b);
 };
 
 std::ostream& operator <<(std::ostream& os, const Fixed& act);
-
-#endif
