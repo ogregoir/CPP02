@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 00:00:38 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/04/23 00:38:25 by ogregoir         ###   ########.fr       */
+/*   Updated: 2024/07/17 17:28:11 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int main( void )
 {
     Fixed           a;
     Fixed const     b( 10  );
-    Fixed const     c( 42.42f );
+    Fixed const     c(42.42f);
     Fixed const     d( b );
     
     a = Fixed( 1234.4321f );

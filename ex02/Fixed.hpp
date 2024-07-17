@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 00:54:10 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/07/06 16:48:26 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/17 17:33:14 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ Fixed operator--(int n);
 static       Fixed &min(Fixed &a, Fixed &b);
 static const Fixed &min(const Fixed &a, const Fixed &b);
 
-static Fixed       &max(Fixed &a, Fixed &b);
+static       Fixed &max(Fixed &a, Fixed &b);
 static const Fixed &max(const Fixed &a, const Fixed &b);
 
 

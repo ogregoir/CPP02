@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 00:41:07 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/04/25 20:32:38 by ogregoir         ###   ########.fr       */
+/*   Updated: 2024/07/17 17:33:52 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,9 @@ Fixed::Fixed(const float cop)
 
 Fixed& Fixed::operator=(const Fixed &copy)
 {
+	if (this != &copy)
+		this->setRawBits(copy.getRawBits());
 	//std::cout << "Copy assignement operator called" << std::endl;
-	this->setRawBits(copy.getRawBits());
 	return(*this);
 }
 
